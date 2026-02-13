@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        :root {
+            --primary-color: #4a90e2;
+            --bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        /* Set EVERYTHING to Bold */
+        * {
+            font-weight: bold !important;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--bg-gradient);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .form-container {
+            background: white;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+            width: 100%;
+            max-width: 500px;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 24px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #000; /* Darker for better visibility when bold */
+        }
+
+        input, textarea, select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #333; /* Thicker border to match bold text */
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        button {
+            width: 100%;
+            padding: 14px;
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            text-transform: uppercase; /* Makes the bold button pop */
+        }
+
+        button:hover {
+            background-color: #357abd;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>USER REGISTRATION</h2>
+        <form action="/submit" method="POST">
+            <div class="form-group">
+                <label>FULL NAME</label>
+                <input type="text" name="username" placeholder="ENTER NAME" required>
+            </div>
+            
+            <div class="form-group">
+                <label>EMAIL ID</label>
+                <input type="email" name="email" placeholder="ENTER EMAIL" required>
+            </div>
+
+            <div class="form-group">
+                <label>MOBILE NUMBER</label>
+                <input type="text" name="mobile" placeholder="ENTER MOBILE" required>
+            </div>
+
+            <div class="form-group">
+                <label>CURRENT CITY</label>
+                <input type="text" name="city" placeholder="ENTER CITY" required>
+            </div>
+
+            <div class="form-group">
+                <label>SALARY RANGE</label>
+                <select name="salary" required>
+                    <option value="" disabled selected>SELECT RANGE</option>
+                    <option value="Below 3 Lakh">BELOW 3 LAKH</option>
+                    <option value="3 Lakh to 6 Lakh">3 LAKH TO 6 LAKH</option>
+                    <option value="6 Lakh and Above">6 LAKH AND ABOVE</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label>ADDRESS</label>
+                <textarea name="address" placeholder="ENTER ADDRESS" required></textarea>
+            </div>
+            
+            <button type="submit">SUBMIT DETAILS</button>
+        </form>
+    </div>
+
+</body>
+</html>
